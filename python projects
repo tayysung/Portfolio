@@ -1,0 +1,23 @@
+import google
+print(googletrans.LANGUAGES)
+
+site = input("What website are we making a password for?")
+
+firsttwochars = site[0:2]
+print("First two characters:", firsttwochars)
+l = len(site)
+lasttwochars = site[l-2:l]
+print("Last two characters:", lasttwochars)
+
+password = firsttwochars + lasttwochars
+print("As of now, the password is:", password)
+
+symbols = [")","!","@","#","$","%","^","&","*","("]
+password = password + symbols[l]
+print("Your final password is:",password)
+
+sample = {"ㅂ":"q", "ㅈ":"w", "ㄷ":"e", "ㄱ":"r", "ㅅ":"t", "ㅛ":"y", "ㅕ":"u", "ㅑ":"i",  "ㅐ":"o", "ㅔ":"p", "ㅁ":"a", "ㄴ":"s", "ㅇ":"d", "ㄹ":"f", "ㅎ":"g", "ㅗ":"h", "ㅓ":"j", "ㅏ":"k", "ㅣ":"l", "ㅋ":"z", "ㅌ":"x", "ㅊ":"c", "ㅍ":"v", "ㅠ":"b", "ㅜ":"n", "ㅡ":"m", "ㅃ":"Q", "ㅉ":"W", "ㄸ":"E", "ㄲ":"R", "ㅆ":"T", "ㅒ":"O", "ㅖ":"P","ㅚ":"hl", "ㅞ":"np", "ㅙ":"ho", "ㅟ":"nl", "ㅝ":"nj", "ㅘ":"hk", "ㅢ":"ml"}
+
+print(sample["ㅍ"])
+print(sample["ㅔ"])
+print(sample["ㅜ"]+sample["ㅔ"])
